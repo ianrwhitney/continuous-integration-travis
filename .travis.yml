@@ -10,10 +10,9 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 script:
-- echo "skipping tests"
 jobs:
   include:
     - stage: build
       script: script/build
     - stage: testlinks
-      script: script/testlinks
+      script: -echo "skipping tests"
